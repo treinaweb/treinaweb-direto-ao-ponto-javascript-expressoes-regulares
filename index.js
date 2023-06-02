@@ -1,3 +1,9 @@
-const frase = "Os cachorros são fofos. Eu amo cachorros!";
+const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-console.log(frase.search(/gatos/));
+const email = "email@treinaweb.com";
+
+if (regex.test(email)) {
+    console.log(`email ${email} é válido e foi enviado`);
+} else {
+    console.log("email inválido");
+}
