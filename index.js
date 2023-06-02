@@ -1,10 +1,11 @@
-const valor = "abc abc";
+const frase = "Os gatos são fofos. Eu amo gatos!";
 
-// console.log(valor.match(/abc/g));
+const regex = /(gatos)/g;
 
+const novaFrase = frase.replace(regex, (match, g1, offset, valor) => {
+    console.log(`Match: ${match} na posição ${offset}: ${g1}`);
+    console.log(`Valor original: ${valor}`);
+    return 'cachorros';
+});
 
-const regex = /(\d{2})\/(\d{2})\/(\d{4})/g;
-
-const frase = 'As datas são 22/05/2023 e 23/05/2023';
-
-console.log(frase.match(regex));
+console.log(novaFrase);
