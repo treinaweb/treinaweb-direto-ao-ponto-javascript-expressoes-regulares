@@ -1,3 +1,3 @@
-const frase = '1, 2, 3; 4.5|6 7';
+const frase = "Os cachorros são fofos. Eu amo cachorros!";
 
-console.log(frase.split(/[\s,;.|]+/));
+console.log(frase.search(/gatos/));
