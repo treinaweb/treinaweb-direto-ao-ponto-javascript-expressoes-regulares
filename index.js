@@ -1,11 +1,6 @@
-let regex1 = new RegExp('abc');
-// ou
-let regex2 = /abc/;
+const frase = "Os cachorro são muito fofos! gatos";
+
+const regex = /gatos/;
 
 
-////////////////////////
-const re = /ab+c/;
-
-
-new RegExp("ab+c");
-
+console.log(regex.test(frase));
