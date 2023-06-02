@@ -1,19 +1,10 @@
-const regex = /abc/;
+const valor = "abc abc";
 
-// console.log(regex.exec('abcd'));
+// console.log(valor.match(/abc/g));
 
 
-const frase = 'A data de hoje é 22/05/2023';
+const regex = /(\d{2})\/(\d{2})\/(\d{4})/g;
 
-const regex2 = /(\d{2})\/(\d{2})\/(\d{4})/;
+const frase = 'As datas são 22/05/2023 e 23/05/2023';
 
-const resultado = regex2.exec(frase);
-
-if (resultado !== null) {
-    console.log('Correspondência completa: ', resultado[0]);
-    console.log('Primeiro grupo de captura (Dia): ', resultado[1]);
-    console.log('Segundo grupo de captura (Mês): ', resultado[2]);
-    console.log('Terceiro grupo de captura (Ano): ', resultado[3]);
-    console.log('Índice da correspondência na string: ', resultado.index);
-    console.log('String original: ', resultado.input);
-}
+console.log(frase.match(regex));
